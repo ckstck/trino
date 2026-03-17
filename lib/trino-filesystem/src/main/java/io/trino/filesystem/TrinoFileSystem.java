@@ -207,8 +207,8 @@ public interface TrinoFileSystem
 
     /**
      * Lists all files within the specified directory recursively. The location can be empty,
-     * listing all files in the file system, otherwise the location must end with a slash. If the
-     * location does not exist, an empty iterator is returned.
+     * listing all files in the file system. The location is always interpreted as a directory,
+     * whether or not it ends with a slash. If the location does not exist, an empty iterator is returned.
      * <p>
      * For hierarchical file systems, if the path is not a directory, an exception is
      * raised.
